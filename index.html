@@ -1,0 +1,398 @@
+<html>
+  <head>
+
+    <meta property="frakie:host" content="dev.frakie.com" />
+    <meta property="frakie:type" content="Script" />
+    <meta property="frakie:title" content="Concentric lines 1" />
+    <meta property="frakie:description" content="." />
+    <meta property="frakie:uuid" content="24189510-9657-434b-b209-5558e9d956c8" />
+    <meta property="frakie:user_id" content="9" />
+    <meta property="frakie:schema" content="{&quot;type&quot;:&quot;object&quot;,&quot;additionalProperties&quot;:false,&quot;required&quot;:true,&quot;order&quot;:[&quot;primi&quot;,&quot;repetitions&quot;,&quot;resize&quot;,&quot;rotate&quot;,&quot;hue&quot;,&quot;brightness&quot;,&quot;saturation&quot;,&quot;stroke_width&quot;,&quot;restroke&quot;,&quot;reverse&quot;,&quot;alpha&quot;,&quot;translateX&quot;,&quot;translateY&quot;],&quot;properties&quot;:{&quot;primi&quot;:{&quot;meta&quot;:{&quot;target&quot;:&quot;primi&quot;,&quot;label&quot;:&quot;Figure&quot;,&quot;help&quot;:&quot;&quot;},&quot;type&quot;:&quot;primitive&quot;,&quot;required&quot;:true,&quot;primary_control&quot;:true,&quot;phony_control&quot;:false,&quot;default&quot;:&quot;a8cdfd81-17a8-405f-818b-e6d6158cf5a8&quot;},&quot;repetitions&quot;:{&quot;meta&quot;:{&quot;target&quot;:&quot;repetitions&quot;,&quot;label&quot;:&quot;Repetitions&quot;,&quot;help&quot;:&quot;&quot;},&quot;type&quot;:&quot;integer&quot;,&quot;required&quot;:true,&quot;primary_control&quot;:false,&quot;phony_control&quot;:false,&quot;default&quot;:23,&quot;minimum&quot;:0,&quot;maximum&quot;:100,&quot;multipleOf&quot;:1},&quot;resize&quot;:{&quot;meta&quot;:{&quot;target&quot;:&quot;resize&quot;,&quot;label&quot;:&quot;Resize&quot;,&quot;help&quot;:&quot;&quot;},&quot;type&quot;:&quot;integer&quot;,&quot;required&quot;:true,&quot;primary_control&quot;:false,&quot;phony_control&quot;:true,&quot;default&quot;:0.9,&quot;minimum&quot;:0,&quot;maximum&quot;:1.2,&quot;multipleOf&quot;:0.01},&quot;rotate&quot;:{&quot;meta&quot;:{&quot;target&quot;:&quot;rotate&quot;,&quot;label&quot;:&quot;Rotate&quot;,&quot;help&quot;:&quot;&quot;},&quot;type&quot;:&quot;integer&quot;,&quot;required&quot;:true,&quot;primary_control&quot;:false,&quot;phony_control&quot;:true,&quot;default&quot;:0,&quot;minimum&quot;:0,&quot;maximum&quot;:10,&quot;multipleOf&quot;:0.1},&quot;hue&quot;:{&quot;meta&quot;:{&quot;target&quot;:&quot;hue&quot;,&quot;label&quot;:&quot;ReHue&quot;,&quot;help&quot;:&quot;&quot;},&quot;type&quot;:&quot;integer&quot;,&quot;required&quot;:true,&quot;primary_control&quot;:false,&quot;phony_control&quot;:true,&quot;default&quot;:0,&quot;minimum&quot;:-40,&quot;maximum&quot;:40,&quot;multipleOf&quot;:0.1},&quot;brightness&quot;:{&quot;meta&quot;:{&quot;target&quot;:&quot;brightness&quot;,&quot;label&quot;:&quot;ReBright&quot;,&quot;help&quot;:&quot;&quot;},&quot;type&quot;:&quot;integer&quot;,&quot;required&quot;:true,&quot;primary_control&quot;:false,&quot;phony_control&quot;:true,&quot;default&quot;:0.25,&quot;minimum&quot;:-0.5,&quot;maximum&quot;:0.5,&quot;multipleOf&quot;:0.01},&quot;saturation&quot;:{&quot;meta&quot;:{&quot;target&quot;:&quot;saturation&quot;,&quot;label&quot;:&quot;ReSaturate&quot;,&quot;help&quot;:&quot;&quot;},&quot;type&quot;:&quot;integer&quot;,&quot;required&quot;:true,&quot;primary_control&quot;:false,&quot;phony_control&quot;:true,&quot;default&quot;:0.54,&quot;minimum&quot;:-1,&quot;maximum&quot;:1,&quot;multipleOf&quot;:0.01},&quot;stroke_width&quot;:{&quot;meta&quot;:{&quot;target&quot;:&quot;stroke_width&quot;,&quot;label&quot;:&quot;Stroke Width&quot;,&quot;help&quot;:&quot;&quot;},&quot;type&quot;:&quot;integer&quot;,&quot;required&quot;:true,&quot;primary_control&quot;:false,&quot;phony_control&quot;:true,&quot;default&quot;:1,&quot;minimum&quot;:0,&quot;maximum&quot;:10,&quot;multipleOf&quot;:0.1},&quot;restroke&quot;:{&quot;meta&quot;:{&quot;target&quot;:&quot;restroke&quot;,&quot;label&quot;:&quot;Re-Stroke&quot;,&quot;help&quot;:&quot;&quot;},&quot;type&quot;:&quot;integer&quot;,&quot;required&quot;:true,&quot;primary_control&quot;:false,&quot;phony_control&quot;:true,&quot;default&quot;:0,&quot;minimum&quot;:-2,&quot;maximum&quot;:2,&quot;multipleOf&quot;:0.01},&quot;reverse&quot;:{&quot;meta&quot;:{&quot;target&quot;:&quot;reverse&quot;,&quot;label&quot;:&quot;Reverse&quot;,&quot;help&quot;:&quot;&quot;},&quot;type&quot;:&quot;boolean&quot;,&quot;required&quot;:true,&quot;primary_control&quot;:false,&quot;phony_control&quot;:true,&quot;default&quot;:false},&quot;alpha&quot;:{&quot;meta&quot;:{&quot;target&quot;:&quot;alpha&quot;,&quot;label&quot;:&quot;Alpha&quot;,&quot;help&quot;:&quot;&quot;},&quot;type&quot;:&quot;integer&quot;,&quot;required&quot;:true,&quot;primary_control&quot;:false,&quot;phony_control&quot;:true,&quot;default&quot;:0,&quot;minimum&quot;:-1,&quot;maximum&quot;:1,&quot;multipleOf&quot;:0.01},&quot;translateX&quot;:{&quot;meta&quot;:{&quot;target&quot;:&quot;translateX&quot;,&quot;label&quot;:&quot;Translate X&quot;,&quot;help&quot;:&quot;&quot;},&quot;type&quot;:&quot;integer&quot;,&quot;required&quot;:true,&quot;primary_control&quot;:false,&quot;phony_control&quot;:true,&quot;default&quot;:0,&quot;minimum&quot;:-20,&quot;maximum&quot;:20,&quot;multipleOf&quot;:0.2},&quot;translateY&quot;:{&quot;meta&quot;:{&quot;target&quot;:&quot;translateY&quot;,&quot;label&quot;:&quot;Translate Y&quot;,&quot;help&quot;:&quot;&quot;},&quot;type&quot;:&quot;integer&quot;,&quot;required&quot;:true,&quot;primary_control&quot;:false,&quot;phony_control&quot;:true,&quot;default&quot;:0,&quot;minimum&quot;:-20,&quot;maximum&quot;:20,&quot;multipleOf&quot;:0.2}}}" />
+
+    <script class="import colorize" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js"  type="application/javascript"></script>
+    <script class="import colorize" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore.js"  type="application/javascript"></script>
+    <script class="import colorize" src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.5.1/snap.svg.js"  type="application/javascript"></script>
+
+    <script class="functions" src="globalMatrix" type="sourced/javascript"></script>
+    <script class="functions" src="disalert" type="sourced/javascript"></script>
+
+    <!-- Start forms setup -->
+
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" rel="stylesheet" type="text/css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js" ></script>
+
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet" type="text/css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js" ></script>
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.0/rangeslider.css" rel="stylesheet" type="text/css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.0/rangeslider.js" ></script>
+
+
+      <script src="https://rawgit.com/maciej-gurban/responsive-bootstrap-toolkit/master/dist/bootstrap-toolkit.min.js" ></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/polyglot.js/2.2.2/polyglot.js" ></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.3.3/backbone.js" ></script>
+
+      <script src="http://www.frakie.com/assets/forms_index.js" ></script>
+    <!-- end forms setup -->
+  </head>
+
+  <body>
+    <script id="colorize">
+
+      window.addEventListener('message', function(e){
+        if(e.data.type != 'colorize')
+          return;
+
+        window.variables=e.data.variables;
+        window.params=e.data.params;
+        window.uid=e.data.uid;
+
+        window.document.body.innerHTML=e.data.svg;
+
+        $('svg').attr({id: 'svg'});
+
+        window.transforms = $('#svg').data('transforms');
+        var mtx = globalMatrix(transforms,variables,params);
+
+        colorize(100,mtx,transforms);
+
+      })
+
+      function colorize(total,globalMatrix, transforms){
+         var all;
+
+         window.svg = Snap('#svg');
+         var ratio = params.width/params.height;
+         var viewBox = {x:0,y:0,width:900,height:900/ratio};
+         svg.attr({width: params.width, height: params.height, viewBox: [viewBox.x,viewBox.y,viewBox.width,viewBox.height].join(' ')});
+
+         window.matrix = globalMatrix;
+         svg.selectAll('.globalMatrix').forEach(function(el){ el.transform(window.matrix);});
+         svg.selectAll('.bgColor').attr(_.extend({fill: variables._backgroundColor}, viewBox));
+
+         var xolor = color2hsl(variables._foregroundColor);
+         var color = {h: xolor[0], s: xolor[1], b: xolor[2], a: 1};
+         var stroke_width= 0.005 * window.variables.stroke_width / transforms.scale_x;
+
+         var m = new Snap.Matrix();
+         var bbox = svg.select('[data-idx="0"]').getBBox();
+         var cx= bbox.x + bbox.width/2;
+         var cy= bbox.y + bbox.height/2;
+
+         var i=0;
+
+         do {
+           matches = svg.selectAll('[data-idx="'+i+'"]');
+           matches.attr({fill: 'transparent', stroke: hsl2rgb(color.h,color.s,color.b,color.a), strokeWidth: stroke_width});
+           matches.forEach(function(x){x.transform(m);});
+
+           m.scale(variables.resize,variables.resize,cx,cy);
+           m.rotate(variables.rotate,cx,cy);
+           m.translate(variables.translateX / (100*transforms.scale_x),variables.translateY / (100*transforms.scale_x));
+
+           stroke_width += window.variables.restroke;
+           color = adjustColor(color, variables);
+
+           i++;
+
+         } while(matches.length);
+
+         var $mylist = $('.mainGroup');
+         var listitems = $mylist.children('g').get();
+				 listitems.sort(function(a, b) {
+						a= $(a).data('idx');
+						b= $(b).data('idx');
+						return variables.reverse ? (a<b ? -1 : 1) : (a>b ? -1 : 1);
+				 });
+
+         $.each(listitems, function(idx, itm) { $mylist.append(itm); });
+
+         window.parent.postMessage({v: '1', type: 'finished', svg: (new XMLSerializer).serializeToString($('#svg')[0]), uid: window.uid}, '*');
+         window.parent.postMessage({v: '1', type: 'status', uid: window.uid,status: 'done', loaded: total, total: total}, '*');
+      }
+
+      function adjustColor(color, adjustments){
+        var newColor = {h: color.h, s: color.s, b: color.b, a: color.a}
+        newColor.h += adjustments.hue || 0
+        newColor.h %= 360
+
+        var adj = {}
+        adj.s = adjustments.saturation || 0
+        adj.b = adjustments.brightness || 0
+        adj.a = adjustments.alpha || 0
+
+        for(var key in adj){
+          // newColor[key] += (adj[key] > 0) ? (adj[key] * (1 - (color[key]))) : (adj[key] * color[key])
+          newColor[key] =  Math.max(Math.min(newColor[key] + adj[key],1),0);
+        }
+
+        return newColor
+      }
+
+      function hex2rgb(hex) {
+        var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2}) *$/i.exec(hex);
+        return result ? {
+          r: parseInt(result[1], 16),
+          g: parseInt(result[2], 16),
+          b: parseInt(result[3], 16)
+        } : null;
+      }
+
+		  function parseRgba(raw){
+
+		    var resul,retval={};
+		    resul = raw.match(/rgba?\(([ \d.e-]*),([ \d.e-]*),([ \d.e-]*),?([ \d.e-]*)?/i);
+
+		    retval.r=parseFloat(resul[1]);
+		    retval.g=parseFloat(resul[2]);
+		    retval.b=parseFloat(resul[3]);
+		    retval.a=typeof(resul[4])== 'undefined' ? 1 : parseFloat(resul[4]);
+
+		    return retval;
+	    }
+
+      
+      function parseColor(color) {
+        if(color[0] == '#')
+          return hex2rgb(color);
+
+        if(color.match(/^rgb/))
+          return parseRgba(color)
+      }
+
+      function color2hsl(color){
+        color = parseColor(color);
+        return rgb2hsl(color.r,color.g,color.b);
+      }
+
+      function hex2hsl(hex) {
+        var rgb = hex2rgb(hex);
+        return rgb2hsl(rgb.r,rgb.g,rgb.b)
+      }
+
+      function rgb2hsl(r, g, b) {
+
+        r=r/255;
+        g=g/255;
+        b=b/255;
+
+        var min = Math.min(r, g, b),
+        max = Math.max(r, g, b),
+        diff = max - min,
+        h = 0, s = 0, l = (min + max) / 2;
+
+        if (diff != 0) {
+          s = l < 0.5 ? diff / (max + min) : diff / (2 - max - min);
+
+          h = (r == max ? (g - b) / diff : g == max ? 2 + (b - r) / diff : 4 + (r - g) / diff) * 60;
+        }
+
+        return [h, s, l];
+      }
+
+      function hsl2rgb(h, s, l, a){
+        if (h == 360){ h = 0;}
+      
+        //
+        // based on C code from http://astronomy.swin.edu.au/~pbourke/colour/hsl/
+        //
+      
+        while (h < 0){ h += 360; }
+        while (h > 360){ h -= 360; }
+        var r, g, b;
+        if (h < 120){
+           r = (120 - h) / 60;
+           g = h / 60;
+           b = 0;
+        }else if (h < 240){
+           r = 0;
+           g = (240 - h) / 60;
+           b = (h - 120) / 60;
+        }else{
+           r = (h - 240) / 60;
+           g = 0;
+           b = (360 - h) / 60;
+        }
+      
+        r = Math.min(r, 1);
+        g = Math.min(g, 1);
+        b = Math.min(b, 1);
+      
+        r = 2 * s * r + (1 - s);
+        g = 2 * s * g + (1 - s);
+        b = 2 * s * b + (1 - s);
+      
+        if (l < 0.5){
+           r = l * r;
+           g = l * g;
+           b = l * b;
+        }else{
+           r = (1 - l) * r + 2 * l - 1;
+           g = (1 - l) * g + 2 * l - 1;
+           b = (1 - l) * b + 2 * l - 1;
+        }
+      
+        r = Math.ceil(r * 255);
+        g = Math.ceil(g * 255);
+        b = Math.ceil(b * 255);
+      
+        // Putting a semicolon at the end of an rgba definition
+        // causes it to not work.
+        return "rgba(" + r + ", " + g + ", " + b + ", " + a + ")"
+      
+      };
+
+
+
+
+    </script>
+
+    <script id="source">
+
+      window.addEventListener('message', function(e){
+        if(e.data.type!='run')
+          return;
+        window.variables = e.data.variables;
+        window.frames =    e.data.frames;
+        window.params =    e.data.params;
+        window.uid =       e.data.uid;
+
+        if(e.data.svg)
+          $('.canvasHolder').innerHTML(e.data.svg);
+        window.parent.postMessage({v: '1', type: 'status', uid: window.uid,status: 'stopped'}, '*');
+
+        setup(e.data.key);
+      });
+
+ 
+      function setup(key){
+        if(! $('#svg').length)
+          $('.canvasHolder').html(
+            $('<svg id="svg"></svg>').attr({width: params.width, height: params.height})
+          );
+
+        window.svg = Snap('#svg');
+
+        if($('#svg').attr('data-key') == _.escape(key)){
+          var transforms = $('#svg').data('transforms');
+          var mtx = globalMatrix(transforms,variables,params);
+          colorize(100,mtx, transforms);
+          return;
+        }else{
+          $('#svg').attr('data-key', _.escape(key));
+        }
+
+        var ratio = params.width/params.height;
+        var viewBox = {x:0,y:0,width:900,height:900/ratio};
+        svg.attr({width: params.width, height: params.height, viewBox: [viewBox.x,viewBox.y,viewBox.width,viewBox.height].join(' ')});
+
+        svg.clear();
+
+        svg.rect(0,0, params.width, params.height).attr(_.extend({fill: variables._backgroundColor},viewBox)).addClass('bgColor');
+
+        get_primi(variables.primi).done(function(resp,status,xhr){
+
+          var parsed = Snap.parse(resp.svg);
+          svg.attr('data-transforms', JSON.stringify(resp.transforms));
+
+          window.matrix = globalMatrix(resp.transforms,variables,params);
+
+          window.group = svg.g()
+            .addClass('globalMatrix mainGroup')
+            .transform(matrix);
+
+          var all_paths = parsed.selectAll('path');
+
+          // For each path, we're going to normalize it for JS CLipper to consume
+          // JsClipper  consumes the paths in the format: [{X:1,Y:2},{X:3,Y:4}] etc
+          all_paths.forEach(function(path, idx){
+            var last_pt = idx == 0 ? {x:0,y:0} : path.getPointAtLength(0);
+
+            // split the path in subpaths (a Move command creates a new subpath) and process each
+            var absoluted=Snap.path.toAbsolute(path);
+            var path2=svg.path(absoluted).remove();
+
+            path2.attr('d').split(/(?=[Mm])/).forEach(function(subpath){
+              // First, we make all move commands Absolute
+              // First, split this subpath in segments, to detect the relative move commands ('m')
+              var segments = subpath.split(/(?=[MmLlHhVvZzCcSsQqTtAa])/);
+
+              // if its a relative move command, make it absolute
+              if(segments[0][0] == 'm'){ // its a relative move command: m100,100
+                var a=segments[0].slice(1).split(/[^-\d.]/); // split to ['100','100']
+                var x=parseFloat(a[0]); // to Float
+                var y=parseFloat(a[1]);
+
+                // Now, change the segment to absolute mode
+                segments[0] = ['M', last_pt.x + x,last_pt.y + y].join(' ')
+              }
+              // now this subpath starts with an Absolute Move command, we can make an SVG path from it, and it will be in the correct place.
+              var path = group.path(segments.join(' ')).attr({"data-idx": 0});
+
+              // transform it
+              //path.addClass('globalMatrix');
+              for(var j=1;j<variables.repetitions;j++){
+                path = path
+                  .clone()
+                  .attr({stroke: '', strokeWidth: '', "data-idx": j});
+              }
+
+
+              last_pt = path.getPointAtLength(path.getTotalLength());
+
+            });
+
+          });
+
+
+          //var longest_path = _.chain(parsed.selectAll('path')).sortBy(function(e){ return e.getTotalLength()}).last().value();
+
+          //var latest = longest_path.getPointAtLength(0);
+          //var paths = longest_path.attr('d').split(/(?=[Mm])/);
+
+          //for (var i=0, len=paths.length; i<len ; i++){
+          //  var subpaths = paths[i].split(/(?=[MmLlHhVvZzCcSsQqTtAa])/);
+
+          //  if(subpaths[0][0] == 'm'){
+          //    var a=subpaths[0].slice(1).split(/[^-\d.]/), x=parseFloat(a[0]), y=parseFloat(a[1]);
+
+          //    subpaths[0] = ['M', latest.x + x,latest.y + y].join(' ')
+          //  }
+
+          //  var path = group.path(subpaths.join(' ')).attr({"data-idx": 0});
+
+          //  latest = path.getPointAtLength(path.getTotalLength());
+
+          //  window.parent.postMessage({v: '1', type: 'status', uid: window.uid, status: 'working', loaded: i, total: len}, '*');
+          //}
+
+          for(var j=0;j<variables.repetitions;j++){
+            group.g(svg.selectAll('[data-idx="'+j+'"]').attr({'data-idx':''})).attr({'data-idx':j});
+          }
+
+          colorize(100,window.matrix,resp.transforms);
+
+        }).fail(function(p1){
+          window.parent.postMessage({v: '1', type: 'status', uid: window.uid,status: 'error', message: JSON.stringify(p1)}, '*');
+        });
+
+      }
+
+
+    </script>
+
+    <link href="../style.css" rel="stylesheet" type="text/css">
+    <script src="../init.js"> </script>
+
+    <div class='row'>
+      <div class='col-xs-4 menuHolder'>
+      </div>
+      <div class='col-xs-8'>
+        <div class="canvasHolder">
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
